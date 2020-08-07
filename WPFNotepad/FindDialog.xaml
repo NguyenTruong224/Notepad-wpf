@@ -1,0 +1,40 @@
+﻿<Window x:Class="WPFNotepad.FindDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFNotepad"
+        mc:Ignorable="d"
+        Title="FindDialog" Height="450" Width="800">
+    <Grid>
+        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+            <DockPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock DockPanel.Dock="Left">Find What:</TextBlock>
+                <TextBox DockPanel.Dock="Right" Width="150"></TextBox>
+            </DockPanel>
+
+        <DockPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button DockPanel.Dock="Top">Find Next</Button>
+            <Button DockPanel.Dock="Bottom">Cancel</Button>
+            </DockPanel>
+
+            <StackPanel Grid.Column="0" Grid.Row="1">
+                <TextBlock>Font Styles</TextBlock>
+               
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <TextBlock>Font Weight</TextBlock>
+              
+            </StackPanel>
+        </Grid>
+</Window>

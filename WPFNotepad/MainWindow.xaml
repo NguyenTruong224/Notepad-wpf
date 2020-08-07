@@ -26,12 +26,13 @@
                     <MenuItem Header="Cut" Click="Cut_Click"/>
                     <MenuItem Header="Copy" Click="Copy_Click"/>
                     <MenuItem Header="Paste" Click="Paste_Click"/>
-                    <MenuItem Header="Clear" Click="MenuItem_Click"/>
+                    <MenuItem Header="Delete" Click="Delete_Click"/>
+                    <MenuItem Header="Clear" Click="Clear_Click"/>
                     <MenuItem Header="Find"/>
                     <MenuItem Header="Find Next"/>
                     <MenuItem Header="Replace"/>
-                    <MenuItem Header="Goto"/>
-                    <MenuItem Header="Select All"/>
+                    <MenuItem Header="Goto" />
+                    <MenuItem Header="Select All" Click="Selectall_Click"/>
                     <MenuItem Header="Time/Date"/>
                 </MenuItem>
                 <MenuItem Header="Format" DataContext="{Binding Editor}">

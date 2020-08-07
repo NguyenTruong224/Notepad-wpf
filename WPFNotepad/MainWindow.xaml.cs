@@ -22,6 +22,8 @@ using System.Reflection;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using System.Threading;
+using Microsoft.VisualBasic;
+using WPFNotepad;
 
 namespace WPFNotepad
 {
@@ -75,10 +77,26 @@ namespace WPFNotepad
             text.Paste();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void Clear_Click(object sender, RoutedEventArgs e)
         {
             text.Clear();
         }
 
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            text.Text = text.Text.Remove(text.SelectionStart, text.SelectionLength);
+        }
+
+        private void Selectall_Click(object sender, RoutedEventArgs e)
+        {
+            text.SelectAll();
+        }
+
+        
     }
 }

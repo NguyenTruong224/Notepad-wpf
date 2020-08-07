@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\visual studio\NotepadWPF\WPF-Notepad-master\WPFNotepad\obj\Debug\
+D:\github\KM\Notepad-wpf\WPFNotepad\obj\Debug\
 WPFNotepad
 none
 false
 DEBUG;TRACE
-D:\visual studio\NotepadWPF\WPF-Notepad-master\WPFNotepad\App.xaml
-3347444980
+D:\github\KM\Notepad-wpf\WPFNotepad\App.xaml
+4-864854799
 
-161275135434
+21-1344688742
 13738642453
-FontDialog.xaml;HelpDialog.xaml;MainWindow.xaml;
+FindDialog.xaml;FontDialog.xaml;HelpDialog.xaml;MainWindow.xaml;
 
 False
 
