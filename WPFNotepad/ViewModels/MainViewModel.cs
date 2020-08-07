@@ -20,12 +20,14 @@ namespace WPFNotepad.ViewModels
         public FileViewModel File { get; set; }
         //Manage help dialog
         public HelpViewModel Help { get; set; }
+        public EditViewModel Edit { get; set; }
 
         public MainViewModel()
         {
             _document = new DocumentModel();
             Help = new HelpViewModel();
             Editor = new EditorViewModel(_document);
+            //Edit = new EditViewModel(_document);
             File = new FileViewModel(_document);
         }
     }

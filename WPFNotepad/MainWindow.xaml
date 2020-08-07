@@ -20,13 +20,13 @@
                     <MenuItem Header="Save" Command="{Binding SaveCommand}"/>
                     <MenuItem Header="Save as..." Command="{Binding SaveAsCommand}"/>
                 </MenuItem>
-                <MenuItem Header="Edit">
-                    <MenuItem Header="Undo"/>
-                    <MenuItem Header="Redo"/>
-                    <MenuItem Header="Cut"/>
-                    <MenuItem Header="Copy"/>
-                    <MenuItem Header="Paste"/>
-                    <MenuItem Header="Delete"/>
+                <MenuItem Header="Edit" DataContext="{Binding Edit}">
+                    <MenuItem Header="Undo" Name ="ItemUndo" Click="Undo_Click"/>
+                    <MenuItem Header="Redo" Click="Redo_Click"/>
+                    <MenuItem Header="Cut" Click="Cut_Click"/>
+                    <MenuItem Header="Copy" Click="Copy_Click"/>
+                    <MenuItem Header="Paste" Click="Paste_Click"/>
+                    <MenuItem Header="Clear" Click="MenuItem_Click"/>
                     <MenuItem Header="Find"/>
                     <MenuItem Header="Find Next"/>
                     <MenuItem Header="Replace"/>
@@ -36,7 +36,7 @@
                 </MenuItem>
                 <MenuItem Header="Format" DataContext="{Binding Editor}">
                     <MenuItem Header="Font" Command="{Binding FormatCommand}"/>
-                    <MenuItem Header="Word wrap" Command="{Binding WrapCommand}" IsChecked="{Binding Format.isWrapped}"/>
+                    <MenuItem Header="Word Wrap" Command="{Binding WrapCommand}" IsChecked="{Binding Format.isWrapped}"/>
                     <MenuItem Header="Text Color"/>
                     <MenuItem Header="Background Color"/>
                 </MenuItem>
@@ -62,11 +62,13 @@
         </Menu>
 
         <DockPanel>
-            <TextBlock DockPanel.Dock="Bottom" 
+            <TextBlock  
+                       DockPanel.Dock="Bottom" 
                        DataContext="{Binding File.Document}"
                        Text="{Binding FilePath}"/>
 
-            <TextBox DockPanel.Dock="Top"
+            <TextBox Name="text"
+                     DockPanel.Dock="Top"
                      VerticalScrollBarVisibility="Visible"
                      DataContext="{Binding Editor}"
                      FontFamily="{Binding Format.Family}"
