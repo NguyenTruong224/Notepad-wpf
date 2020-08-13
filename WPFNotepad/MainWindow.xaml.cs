@@ -97,5 +97,21 @@ namespace WPFNotepad
         {
             text.SelectAll();
         }
+        void HandleRequestNavigate(object sender, RoutedEventArgs e)
+        {
+            string navigateUri = sourceCodeLink.NavigateUri.ToString();
+            Process.Start(new ProcessStartInfo(navigateUri));
+            e.Handled = true;
+        }
+        private void OnMouseEnter(object sender, EventArgs e)
+        {
+            sourceCodeLink.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void OnMouseLeave(object sender, EventArgs e)
+        {
+            sourceCodeLink.TextDecorations = null;
+        }
+        
     }
 }
