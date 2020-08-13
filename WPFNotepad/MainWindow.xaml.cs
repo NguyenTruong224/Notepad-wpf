@@ -82,9 +82,10 @@ namespace WPFNotepad
             text.Clear();
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void Find_Click(object sender, RoutedEventArgs e)
         {
-
+            var openFindDialog = new FindDialog();
+            openFindDialog.ShowDialog();
         }
 
         private void Delete_Click(object sender, RoutedEventArgs e)

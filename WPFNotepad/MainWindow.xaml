@@ -28,12 +28,8 @@
                     <MenuItem Header="Paste" Click="Paste_Click"/>
                     <MenuItem Header="Delete" Click="Delete_Click"/>
                     <MenuItem Header="Clear" Click="Clear_Click"/>
-                    <MenuItem Header="Find"/>
-                    <MenuItem Header="Find Next"/>
-                    <MenuItem Header="Replace"/>
-                    <MenuItem Header="Goto" />
+                    <MenuItem Header="Find" Click="Find_Click"/>
                     <MenuItem Header="Select All" Click="Selectall_Click"/>
-                    <MenuItem Header="Time/Date"/>
                 </MenuItem>
                 <MenuItem Header="Format" DataContext="{Binding Editor}">
                     <MenuItem Header="Font" Command="{Binding FormatCommand}"/>
