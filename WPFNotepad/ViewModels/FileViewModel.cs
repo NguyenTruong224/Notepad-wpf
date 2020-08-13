@@ -47,7 +47,7 @@ namespace WPFNotepad.ViewModels
         private void SaveFileAs()
         {
             var saveFileDialog = new SaveFileDialog();
-            saveFileDialog.Filter = "Text File (*.txt)|*.txt";
+            saveFileDialog.Filter = "Text File (*.txt)|*.txt|Log File (*.log)|*.log";
             if(saveFileDialog.ShowDialog() == true)
             {
                 DockFile(saveFileDialog);
