@@ -17,10 +17,20 @@
 
         <x:Array x:Key="FontSizeOptions"
                  Type="sys:Double">
+            <sys:Double>8</sys:Double>
+            <sys:Double>9</sys:Double>
+            <sys:Double>11</sys:Double>
             <sys:Double>12</sys:Double>
+            <sys:Double>14</sys:Double>
+            <sys:Double>16</sys:Double>
             <sys:Double>18</sys:Double>
+            <sys:Double>20</sys:Double>
+            <sys:Double>22</sys:Double>
+            <sys:Double>24</sys:Double>
             <sys:Double>26</sys:Double>
+            <sys:Double>28</sys:Double>
             <sys:Double>36</sys:Double>
+            <sys:Double>48</sys:Double>
             <sys:Double>72</sys:Double>
         </x:Array>
 
