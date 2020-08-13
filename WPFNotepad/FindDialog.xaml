@@ -20,7 +20,7 @@
 
             <DockPanel Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock DockPanel.Dock="Left">Find What:</TextBlock>
-                <TextBox DockPanel.Dock="Right" Width="150"></TextBox>
+                <TextBox DockPanel.Dock="Right" Width="150" AutomationProperties.Name="find_string"></TextBox>
             </DockPanel>
 
         <DockPanel Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">

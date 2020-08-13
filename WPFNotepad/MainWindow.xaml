@@ -34,15 +34,17 @@
                 <MenuItem Header="Format" DataContext="{Binding Editor}">
                     <MenuItem Header="Font" Command="{Binding FormatCommand}"/>
                     <MenuItem Header="Word Wrap" Command="{Binding WrapCommand}" IsChecked="{Binding Format.isWrapped}"/>
-                    <MenuItem Header="Text Color"/>
-                    <MenuItem Header="Background Color"/>
                 </MenuItem>
                 <MenuItem Header="View">
                     <MenuItem Header="FilePath Bar" Command="{Binding StatusBar}" IsChecked="{Binding Format.isStatusBar}"/>
                 </MenuItem>
                 <MenuItem Header="Help" DataContext="{Binding Help}">
-                    <MenuItem Header="View Help"/>
+                    <MenuItem Header="Report Bug"/>
                     <MenuItem Header="About" Command="{Binding HelpCommand}"/>
+                </MenuItem>
+                <MenuItem Header="Other">
+                    <MenuItem Header="Text Spinner"/>
+                    <MenuItem Header="Text Color Changing"/>
                 </MenuItem>
             </Menu.Items>
         </Menu>

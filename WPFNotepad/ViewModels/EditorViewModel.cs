@@ -25,7 +25,7 @@ namespace WPFNotepad.ViewModels
             FormatCommand = new RelayCommand(OpenStyleDialog);
             WrapCommand = new RelayCommand(ToggleWrap);
         }
-
+        
         private void OpenStyleDialog()
         {
             var fontDialog = new FontDialog();
