@@ -39,14 +39,15 @@
                     <MenuItem Header="FilePath Bar" Command="{Binding StatusBar}" IsChecked="{Binding Format.isStatusBar}"/>
                 </MenuItem>
                 <MenuItem Header="Help" DataContext="{Binding Help}">
-                    <MenuItem Header="Report Bug"/>
-                    <MenuItem Header="About" Command="{Binding HelpCommand}"/>
+                    <MenuItem Header="View Help" Click="ViewHelp_Click"/>
+                    <MenuItem Header="Send Feedback" Click="SendFeedback_Click"/>
+                    <MenuItem Header="About the application" Command="{Binding HelpCommand}"/>
                 </MenuItem>
 
                 <Hyperlink Name="sourceCodeLink" TextDecorations="None"
                      MouseEnter="OnMouseEnter"
                      MouseLeave="OnMouseLeave"
-                     NavigateUri="https://github.com/NguyenTruong224/Notepad-wpf" RequestNavigate="HandleRequestNavigate">
+                     NavigateUri="https://github.com/NguyenTruong224/Notepad-wpf" RequestNavigate="sourceCodeHL_RequestNavigate">
                     Source Code
                 </Hyperlink>
             </Menu.Items>

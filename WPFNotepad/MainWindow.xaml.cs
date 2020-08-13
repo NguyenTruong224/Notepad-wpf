@@ -97,10 +97,14 @@ namespace WPFNotepad
         {
             text.SelectAll();
         }
-        void HandleRequestNavigate(object sender, RoutedEventArgs e)
+        void HandleRequestNavigate(string URL)
+        {
+            Process.Start(new ProcessStartInfo(URL));
+        }
+        void sourceCodeHL_RequestNavigate(object sender, RoutedEventArgs e)
         {
             string navigateUri = sourceCodeLink.NavigateUri.ToString();
-            Process.Start(new ProcessStartInfo(navigateUri));
+            HandleRequestNavigate(navigateUri);
             e.Handled = true;
         }
         private void OnMouseEnter(object sender, EventArgs e)
@@ -112,6 +116,19 @@ namespace WPFNotepad
         {
             sourceCodeLink.TextDecorations = null;
         }
-        
+
+        private void ViewHelp_Click(object sender, RoutedEventArgs e)
+        {
+            string helpUrl = "https://www.bing.com/search?q=nh%e1%ba%adn+tr%e1%bb%a3+gi%c3%bap+v%e1%bb%81+notepad+trong+windows+10&filters=guid:%224466414-vi-dia%22%20lang:%22vi%22&form=T00032&ocid=HelpPane-BingIA";
+            HandleRequestNavigate(helpUrl);
+            e.Handled = true;
+        }
+
+        private void SendFeedback_Click(object sender, RoutedEventArgs e)
+        {
+            string feedBackUrl = "https://mail.google.com";
+            HandleRequestNavigate(feedBackUrl);
+            e.Handled = true;
+        }
     }
 }
