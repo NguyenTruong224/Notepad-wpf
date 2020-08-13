@@ -62,6 +62,7 @@ namespace WPFNotepad
             return data.CanRedo();
         }
 
+        
         public FindNextResult FindNext(FindNextSearch search)
         {
             FindNextResult result = new FindNextResult();

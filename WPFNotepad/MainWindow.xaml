@@ -35,9 +35,7 @@
                     <MenuItem Header="Font" Command="{Binding FormatCommand}"/>
                     <MenuItem Header="Word Wrap" Command="{Binding WrapCommand}" IsChecked="{Binding Format.isWrapped}"/>
                 </MenuItem>
-                <MenuItem Header="View">
-                    <MenuItem Header="FilePath Bar" Command="{Binding StatusBar}" IsChecked="{Binding Format.isStatusBar}"/>
-                </MenuItem>
+                
                 <MenuItem Header="Help" DataContext="{Binding Help}">
                     <MenuItem Header="View Help" Click="ViewHelp_Click"/>
                     <MenuItem Header="Send Feedback" Click="SendFeedback_Click"/>

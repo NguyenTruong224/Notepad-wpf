@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,25 @@ namespace WPFNotepad
         public HelpDialog()
         {
             InitializeComponent();
+        }
+        void HandleRequestNavigate(string URL)
+        {
+            Process.Start(new ProcessStartInfo(URL));
+        }
+        void sourceCodeHL_RequestNavigate(object sender, RoutedEventArgs e)
+        {
+            string navigateUri = sourceCodeLink.NavigateUri.ToString();
+            HandleRequestNavigate(navigateUri);
+            e.Handled = true;
+        }
+        private void OnMouseEnter(object sender, EventArgs e)
+        {
+            sourceCodeLink.TextDecorations = TextDecorations.Underline;
+        }
+
+        private void OnMouseLeave(object sender, EventArgs e)
+        {
+            sourceCodeLink.TextDecorations = null;
         }
     }
 }

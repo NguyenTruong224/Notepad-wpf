@@ -15,10 +15,17 @@
                    FontWeight="Bold" Height="37"><Run Text="Demo"/></TextBlock>
             <TextBlock FontSize="18"
                    FontWeight="SemiBold"><Run Text="About"/></TextBlock>
-            <TextBlock TextWrapping="Wrap"><Run Text="This is a C# WPF sample notepad application written by Nguyen Tri Truong(17521187), Le Anh Vu (17521269)"/><LineBreak/></TextBlock>
+            <TextBlock TextWrapping="Wrap"><Run Text="This is a C# WPF sample text editor application written by Nguyen Tri Truong(17521187), Le Anh Vu (17521269)"/><LineBreak/></TextBlock>
             <TextBlock FontSize="18"
                     FontWeight="SemiBold"><Run Text="Link source code"/></TextBlock>
-            <TextBlock TextWrapping="Wrap"><Run Text="-Github:"/><LineBreak/><Run Text="-Google drive:"/><LineBreak/></TextBlock>
+            <TextBlock TextWrapping="Wrap"><Run Text="-Github:"/>
+            <Hyperlink Name="sourceCodeLink" TextDecorations="None"
+                     MouseEnter="OnMouseEnter"
+                     MouseLeave="OnMouseLeave"
+                     NavigateUri="https://github.com/NguyenTruong224/Notepad-wpf" RequestNavigate="sourceCodeHL_RequestNavigate">
+                    https://github.com/NguyenTruong224/Notepad-wpf
+                </Hyperlink>
+            </TextBlock>
         </StackPanel>
     </Grid>
 </Window>
