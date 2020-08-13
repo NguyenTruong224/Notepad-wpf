@@ -42,22 +42,11 @@
                     <MenuItem Header="Background Color"/>
                 </MenuItem>
                 <MenuItem Header="View">
-                    <MenuItem Header="Status Bar" Command="{Binding StatusBar}" IsChecked="{Binding Format.isStatusBar}"/>
+                    <MenuItem Header="FilePath Bar" Command="{Binding StatusBar}" IsChecked="{Binding Format.isStatusBar}"/>
                 </MenuItem>
                 <MenuItem Header="Help" DataContext="{Binding Help}">
                     <MenuItem Header="View Help"/>
                     <MenuItem Header="About" Command="{Binding HelpCommand}"/>
-                </MenuItem>
-                <MenuItem Header="Other">
-                    <MenuItem Header="Open Image"/>
-                    <MenuItem Header="Save as..."/>
-                    <MenuItem Header="Open"/>
-                </MenuItem>
-                <MenuItem Header="Code Editor" DataContext="{Binding Help}">
-                    <MenuItem Header="Set list of keyword"/>
-                    <MenuItem Header="Keyword Color"/>
-                    <MenuItem Header="Normal Text Color"/>
-                    <MenuItem Header="Auto fill brackets" IsChecked="{Binding Format.isWrapped}"/>
                 </MenuItem>
             </Menu.Items>
         </Menu>
