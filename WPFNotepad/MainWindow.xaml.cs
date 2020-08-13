@@ -97,7 +97,5 @@ namespace WPFNotepad
         {
             text.SelectAll();
         }
-
-        
     }
 }

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPFNotepad"
         xmlns:viewmodels="clr-namespace:WPFNotepad.ViewModels"
         mc:Ignorable="d"
-        Title="WPF Notepad" Height="400" Width="525"
+        Title="WPF Text Editor" Height="400" Width="525"
         WindowStartupLocation="CenterScreen">
     <Window.DataContext>
         <viewmodels:MainViewModel/>
@@ -41,10 +41,6 @@
                 <MenuItem Header="Help" DataContext="{Binding Help}">
                     <MenuItem Header="Report Bug"/>
                     <MenuItem Header="About" Command="{Binding HelpCommand}"/>
-                </MenuItem>
-                <MenuItem Header="Other">
-                    <MenuItem Header="Text Spinner"/>
-                    <MenuItem Header="Text Color Changing"/>
                 </MenuItem>
             </Menu.Items>
         </Menu>
